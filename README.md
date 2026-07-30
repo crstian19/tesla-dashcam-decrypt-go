@@ -1,4 +1,8 @@
-# tesdecrypt
+<p align="center">
+  <img src="assets/tesdecrypt.png" alt="tesdecrypt" width="200">
+</p>
+
+<h1 align="center">tesdecrypt</h1>
 
 [![CI](https://github.com/crstian19/tesla-dashcam-decrypt-go/actions/workflows/ci.yml/badge.svg)](https://github.com/crstian19/tesla-dashcam-decrypt-go/actions/workflows/ci.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/crstian19/tesla-dashcam-decrypt-go.svg)](https://pkg.go.dev/github.com/crstian19/tesla-dashcam-decrypt-go)
@@ -53,10 +57,10 @@ Output is a live progress view on a terminal and plain lines when redirected, so
 it stays readable in a cron log. Decrypted files are written with mode `0600`
 and their directories `0700`: the footage is yours.
 
-Files in the input tree that were never encrypted — an ordinary MP4 you already
-decrypted — are reported as skipped rather than as failures, so they do not make
-the run exit non-zero. A clip that *is* encrypted but is damaged or truncated is
-reported as a failure and produces no output at all.
+Files in the input tree that were never encrypted, such as an ordinary MP4 you
+already decrypted, are reported as skipped rather than as failures, so they do
+not make the run exit non-zero. A clip that *is* encrypted but is damaged or
+truncated is reported as a failure and produces no output at all.
 
 ### Getting a token
 
@@ -89,7 +93,7 @@ the payload:
 | `0x1045` | 17 | VIN (ASCII) |
 | `0x1056` | 8 | Timestamp (uint64, big-endian) |
 | `0x105e` | 44 | `wrapped_key` |
-| `0x2000`+ | — | AES-128-CBC payload, 4096-byte pages |
+| `0x2000`+ | rest | AES-128-CBC payload, 4096-byte pages |
 
 The payload uses an eCryptfs-style scheme: AES-128-CBC over 4096-byte pages,
 where each page derives its own IV and no IV is stored in the file.
@@ -120,8 +124,8 @@ a dictionary on the id, so one of the two clips is silently dropped.)
 AES-CBC has no integrity check: under the wrong key a clip decrypts to
 full-length noise rather than failing. After decrypting the first page
 `tesdecrypt` checks for the `ftyp` box every MP4 opens with, and fails the clip
-if it is missing — otherwise a whole drive could decrypt to unplayable files
-while the summary reported success.
+if it is missing. Otherwise a whole drive could decrypt to unplayable files while
+the summary reported success.
 
 ## Development
 
@@ -140,7 +144,8 @@ layout, so a format change breaks one file.
 
 `TESLA_API_BASE` overrides the API origin, which is how the end-to-end test
 points the binary at a stub server. It must be HTTPS unless it is loopback, and
-any override is announced on stderr — your bearer token rides on every request.
+any override is announced on stderr, because your bearer token rides on every
+request.
 
 ## Credits
 
@@ -150,4 +155,4 @@ reverse-engineered the format. MIT, as is the original.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT, see [LICENSE](LICENSE).
