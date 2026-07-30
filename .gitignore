@@ -1,0 +1,13 @@
+# Build artefacts
+/tesdecrypt
+coverage.out
+
+# Never commit tokens or footage
+.env
+EncryptedClips/
+DecryptedClips/
+*.mp4
+*.MP4
+
+# The container fixtures are generated, tiny and safe to keep
+!internal/container/testdata/*.mp4

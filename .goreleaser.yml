@@ -1,0 +1,51 @@
+version: 2
+
+project_name: tesdecrypt
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - id: tesdecrypt
+    main: ./cmd/tesdecrypt
+    binary: tesdecrypt
+    env:
+      - CGO_ENABLED=0
+    flags:
+      - -trimpath
+    ldflags:
+      - -s -w -X main.version={{ .Version }}
+    goos: [linux, darwin, windows]
+    goarch: [amd64, arm64]
+
+archives:
+  - formats: [tar.gz]
+    format_overrides:
+      - goos: windows
+        formats: [zip]
+    files: [README.md, LICENSE]
+
+checksum:
+  name_template: checksums.txt
+
+changelog:
+  use: github
+  sort: asc
+  groups:
+    - title: Features
+      regexp: '^feat'
+      order: 0
+    - title: Fixes
+      regexp: '^fix'
+      order: 1
+    - title: Other
+      order: 2
+  filters:
+    exclude: ['^docs:', '^test:', '^chore:', '^ci:']
+
+release:
+  footer: |
+    Decrypts your own Tesla dashcam footage locally. Only clip identifiers and
+    the ownership metadata already in each header reach Tesla; the video never
+    leaves your machine.

@@ -1,0 +1,45 @@
+version: "2"
+
+linters:
+  enable:
+    - bodyclose
+    - copyloopvar
+    - errorlint
+    - gocritic
+    - gosec
+    - misspell
+    - nilerr
+    - noctx
+    - prealloc
+    - revive
+    - unconvert
+    - unparam
+    - wastedassign
+  settings:
+    gosec:
+      excludes:
+        # This is a file-processing CLI: opening paths the user points at and
+        # running ffmpeg on them is the job, not an injection risk.
+        - G304
+        - G204
+        # Deliberate discards are marked with an explicit nolint:errcheck.
+        - G104
+        # Flags the *name* of an environment variable as a credential.
+        - G101
+  exclusions:
+    rules:
+      # Test helpers legitimately build fixtures with weak primitives.
+      - path: _test\.go
+        linters:
+          - gosec
+
+formatters:
+  enable:
+    - gofumpt
+    - gci
+  settings:
+    gci:
+      sections:
+        - standard
+        - default
+        - prefix(github.com/crstian19/tesla-dashcam-decrypt-go)
