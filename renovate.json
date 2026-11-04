@@ -1,19 +1,33 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": ["config:recommended", ":semanticCommits"],
+  "extends": [
+    "github>crstian19/.github:renovate-config",
+    ":semanticCommits"
+  ],
   "timezone": "Europe/Madrid",
-  "schedule": ["* 4-7 * * 1"],
-  "labels": ["dependencies"],
-  "postUpdateOptions": ["gomodTidy"],
+  "schedule": [
+    "* 4-7 * * 1"
+  ],
+  "labels": [
+    "dependencies"
+  ],
+  "postUpdateOptions": [
+    "gomodTidy"
+  ],
   "packageRules": [
     {
       "description": "Group the Charm libraries: they move together.",
-      "matchPackageNames": ["charm.land/**", "github.com/charmbracelet/**"],
+      "matchPackageNames": [
+        "charm.land/**",
+        "github.com/charmbracelet/**"
+      ],
       "groupName": "charm"
     },
     {
       "description": "Patch updates for the standard library and tooling need no review.",
-      "matchUpdateTypes": ["patch"],
+      "matchUpdateTypes": [
+        "patch"
+      ],
       "automerge": true
     }
   ]
