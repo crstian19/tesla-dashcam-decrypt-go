@@ -4,15 +4,8 @@
     "github>crstian19/.github:renovate-config",
     ":semanticCommits"
   ],
-  "timezone": "Europe/Madrid",
-  "schedule": [
-    "* 4-7 * * 1"
-  ],
   "labels": [
     "dependencies"
-  ],
-  "postUpdateOptions": [
-    "gomodTidy"
   ],
   "packageRules": [
     {
