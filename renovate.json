@@ -15,13 +15,6 @@
         "github.com/charmbracelet/**"
       ],
       "groupName": "charm"
-    },
-    {
-      "description": "Patch updates for the standard library and tooling need no review.",
-      "matchUpdateTypes": [
-        "patch"
-      ],
-      "automerge": true
     }
   ]
 }
