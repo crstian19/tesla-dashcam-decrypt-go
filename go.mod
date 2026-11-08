@@ -1,6 +1,6 @@
 module github.com/crstian19/tesla-dashcam-decrypt-go
 
-go 1.27.2
+go 1.27.3
 
 require (
 	charm.land/bubbles/v2 v2.1.1
