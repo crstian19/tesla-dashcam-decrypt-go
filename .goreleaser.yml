@@ -29,22 +29,13 @@ archives:
 checksum:
   name_template: checksums.txt
 
+# releaser-pleaser writes the release notes when it creates the release, so
+# GoReleaser only uploads the artifacts and appends the footer below.
 changelog:
-  use: github
-  sort: asc
-  groups:
-    - title: Features
-      regexp: '^feat'
-      order: 0
-    - title: Fixes
-      regexp: '^fix'
-      order: 1
-    - title: Other
-      order: 2
-  filters:
-    exclude: ['^docs:', '^test:', '^chore:', '^ci:']
+  disable: true
 
 release:
+  mode: append
   footer: |
     Decrypts your own Tesla dashcam footage locally. Only clip identifiers and
     the ownership metadata already in each header reach Tesla; the video never

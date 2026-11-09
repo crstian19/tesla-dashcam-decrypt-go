@@ -15,6 +15,18 @@
         "github.com/charmbracelet/**"
       ],
       "groupName": "charm"
+    },
+    {
+      "description": "Go toolchain and indirect (security) updates change the shipped binary, so they are fixes and cut a patch release. Direct dependencies are already fix(deps); tooling and CI stay chore.",
+      "matchManagers": [
+        "gomod"
+      ],
+      "matchDepTypes": [
+        "golang",
+        "toolchain",
+        "indirect"
+      ],
+      "semanticCommitType": "fix"
     }
   ]
 }

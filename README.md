@@ -147,6 +147,20 @@ points the binary at a stub server. It must be HTTPS unless it is loopback, and
 any override is announced on stderr, because your bearer token rides on every
 request.
 
+### Releases
+
+[releaser-pleaser](https://github.com/apricote/releaser-pleaser) keeps a
+release PR open with the next version and `CHANGELOG.md`, computed from the
+Conventional Commits on `main`: `feat` bumps the minor, `fix` the patch, `!`
+the major. Merging that PR tags `vX.Y.Z` and creates the GitHub release, and
+the tag builds the Linux and macOS binaries for both architectures. Renovate
+commits dependency and Go toolchain updates as `fix(deps)`, so they ship in the
+next patch release; tooling and CI updates are `chore` and do not.
+
+The workflow authenticates as the `crstian19-releaser` GitHub App (secrets
+`RELEASER_APP_CLIENT_ID` and `RELEASER_APP_PRIVATE_KEY`): a tag pushed with
+`GITHUB_TOKEN` would not trigger the release.
+
 ## Credits
 
 Ported to Go from [XGxF3/tesla-dashcam-decrypt](https://github.com/XGxF3/tesla-dashcam-decrypt),
