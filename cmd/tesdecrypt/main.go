@@ -18,7 +18,7 @@ import (
 	"strings"
 	"syscall"
 
-	"github.com/charmbracelet/fang"
+	"charm.land/fang/v2"
 	"github.com/spf13/cobra"
 
 	"github.com/crstian19/tesla-dashcam-decrypt-go/internal/pipeline"
