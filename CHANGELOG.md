@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.1.2](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.2)
+
+[Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.1...v0.1.2)
+
+### Bug Fixes
+
+- **deps**: bump Go to 1.27.4 for stdlib vulnerabilities (#23) ([2c92f52](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/2c92f5248ebd091ce0fcc16c4a91a22efd8112bb))
+
 ## [v0.1.1](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.1)
 
 [Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.0...v0.1.1)
