@@ -1,5 +1,16 @@
 # Changelog
 
+## [v0.1.1](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.1)
+
+[Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.0...v0.1.1)
+
+### Bug Fixes
+
+- **deps**: update module golang.org/x/term to v0.48.0 (#19) ([8b5a2b8](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/8b5a2b8f6e3d3d85396417bf80cdb1e2fcd9f825))
+- **deps**: migrate to charm.land/fang/v2 (#22) ([16dd32f](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/16dd32fa8676b1223c7fd0efffb7914285cb46b5))
+- **deps**: update module golang.org/x/sync to v0.25.0 (#18) ([fa27980](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/fa279800590c77edca3c86447ae0a97a67dd724d))
+- **deps**: update module charm.land/lipgloss/v2 to v2.1.0 (#17) ([fb426b4](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/fb426b4e142fd11bf0b391bed89c5fb553910c04))
+
 ## [v0.1.0](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.0)
 
 ### Features
