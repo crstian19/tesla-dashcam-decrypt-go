@@ -1,5 +1,13 @@
 # Changelog
 
+## [v0.1.3](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.3)
+
+[Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.2...v0.1.3)
+
+### Bug Fixes
+
+- **deps**: update module charm.land/lipgloss/v2 to v2.1.1 (#25) ([ac41bcf](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/ac41bcf354c3163bf18402cdd2f8e3ff020f57f6))
+
 ## [v0.1.2](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.2)
 
 [Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.1...v0.1.2)
