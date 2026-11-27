@@ -1,5 +1,14 @@
 # Changelog
 
+## [v0.1.5](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.5)
+
+[Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.4...v0.1.5)
+
+### Bug Fixes
+
+- **deps**: update module charm.land/bubbletea/v2 to v2.1.3 (#31) ([44a90a8](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/44a90a8c69add054249bea5c4495a9759cd14dba))
+- **deps**: update module charm.land/bubbletea/v2 to v2.2.0 (#33) ([9494eee](https://github.com/crstian19/tesla-dashcam-decrypt-go/commit/9494eeed6f9af89bb8f82e326373bc543924198b))
+
 ## [v0.1.4](https://github.com/crstian19/tesla-dashcam-decrypt-go/releases/tag/v0.1.4)
 
 [Compare to previous version](https://github.com/crstian19/tesla-dashcam-decrypt-go/compare/v0.1.3...v0.1.4)
